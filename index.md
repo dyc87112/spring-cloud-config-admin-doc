@@ -11,7 +11,7 @@
 
 本项目采用了前后端分离的架构，通过core模块抽象了前端需要的操作，再通过persistence和discovery模块隔离不同的配置仓库和不同的服务注册中心，从而达到前端程序不需要关心到底使用了什么存储配置以及使用了什么注册中心，这样用户可以根据自己的需要自由的组合不同的配置存储和服务治理机制，尽可能的匹配大部分Spring Cloud用户的需求。
 
-![](https://github.com/dyc87112/spring-cloud-config-admin/raw/master/statics/images/scca-arch.png)
+![](https://github.com/dyc87112/spring-cloud-config-admin-doc/raw/master/statics/images/scca-arch.png)
 
 # 部署方式
 
@@ -29,7 +29,7 @@
 
 全分离模式就是将上述三个部分都以独立的进程进行部署，每一个部分都可以做高可用，具体部署结构可以如下图所示：
 
-![](https://github.com/dyc87112/spring-cloud-config-admin/raw/master/statics/images/scca-deploy-1.png)
+![](https://github.com/dyc87112/spring-cloud-config-admin-doc/raw/master/statics/images/scca-deploy-1.png)
 
 这种模式既可以适用于已经在使用Spring Cloud Config的用户，也适用于正准备开始适用的用户。其中，位于最底层的`Spring Cloud配置中心`就是一个最原始的Spring Cloud Config Server。所以，对于已经在使用Spring Cloud Config的用户只需要再部署一套`SCCA REST 服务端`和`SCCA UI 服务端`，并做一些配置就可以使用SCCA来管理所有的配置信息了。
 
@@ -48,7 +48,7 @@
 
 如下图所示，我们可以将`SCCA UI服务端`与`SCCA REST服务端`组合在一个程序中来部署，这样可以有效的降低全分离模式的部署复杂度，同时对于已经在使用Spring Cloud Config的用户来说非常友好，已经部署的配置中心可以继续沿用。
 
-![](https://github.com/dyc87112/spring-cloud-config-admin/raw/master/statics/images/scca-deploy-2.png)
+![](https://github.com/dyc87112/spring-cloud-config-admin-doc/raw/master/statics/images/scca-deploy-2.png)
 
 **案例**
 
@@ -62,7 +62,7 @@
 
 最后介绍一种比较暴力的使用模式，SCCA支持将所有三个模块整合在一起使用和部署，在一个Spring Boot应用中同时包含：`Spring Cloud 配置中心`、`SCCA REST 服务端`以及`SCCA UI 服务端`，具体如下所示：
 
-![](https://github.com/dyc87112/spring-cloud-config-admin/raw/master/statics/images/scca-deploy-4.png)
+![](https://github.com/dyc87112/spring-cloud-config-admin-doc/raw/master/statics/images/scca-deploy-4.png)
 
 **案例**
 
