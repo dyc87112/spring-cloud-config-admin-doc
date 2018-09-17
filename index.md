@@ -1,7 +1,6 @@
 
 # 简介
 
-[![Build Status](https://travis-ci.org/dyc87112/spring-cloud-config-admin.svg?branch=1.2.x)](https://travis-ci.org/dyc87112/spring-cloud-config-admin)
 [![Release Version](https://img.shields.io/github/release/dyc87112/spring-cloud-config-admin.svg)](https://github.com/dyc87112/spring-cloud-config-admin/releases)
 [![Maven Central](https://img.shields.io/maven-central/v/com.didispace/spring-cloud-config-admin.svg)](https://mvnrepository.com/artifact/com.didispace/spring-cloud-config-admin)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
